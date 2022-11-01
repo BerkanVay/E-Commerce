@@ -8,7 +8,7 @@
 import UIKit
 
 class ProductTableViewController: UITableViewController {
-  
+
   private var viewModel = ProductTableViewModel()
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -24,8 +24,12 @@ extension ProductTableViewController: ProductTableViewDelegate {
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ProductTableViewCell else { return UITableViewCell()}
-    cell.item = viewModel.result?.products[indexPath.row]
-    
+    guard let item = viewModel.result?.products[indexPath.row] else {
+      return UITableViewCell()
+    }
+    cell.item = item
+    cell.delegate = self
+    cell.isFavorite = FavoriteStorage.contains(id: item.id)
     return cell
   }
   
@@ -34,4 +38,20 @@ extension ProductTableViewController: ProductTableViewDelegate {
       self.reloadData()
     }
   }
+}
+
+extension ProductTableViewController: ProductTableViewCellDelegate {
+  func favoriteButtonTapped(forProduct product: Product) {
+    if FavoriteStorage.contains(id: product.id){
+      FavoriteStorage.remove(id: product.id)
+    } else {
+      FavoriteStorage.add(id: product.id)
+    }
+    tableView.reloadData()
+  }
+  
+  func bagButtonTapped(forProduct product: Product) {
+    self.reloadData()
+  }
+  
 }

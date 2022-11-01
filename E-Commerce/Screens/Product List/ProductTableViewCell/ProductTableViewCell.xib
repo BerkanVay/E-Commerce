@@ -34,12 +34,18 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owS-VM-HF6">
                                 <rect key="frame" x="0.0" y="66.666666666666671" width="292" height="34.333333333333329"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="bag" catalog="system" title="Add to Bag"/>
+                                <buttonConfiguration key="configuration" style="plain" image="bag" catalog="system"/>
+                                <connections>
+                                    <action selector="bagButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="J1O-oU-sak"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEz-Kf-8oV">
                                 <rect key="frame" x="0.0" y="113.99999999999999" width="292" height="34.333333333333329"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title="Make Favorite"/>
+                                <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                                <connections>
+                                    <action selector="favoriteButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="v1d-ht-UjV"/>
+                                </connections>
                             </button>
                         </subviews>
                     </stackView>
@@ -62,6 +68,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="bagButton" destination="owS-VM-HF6" id="IfA-pm-y0R"/>
+                <outlet property="favoriteButton" destination="UEz-Kf-8oV" id="UXV-zS-Yog"/>
                 <outlet property="nameLabel" destination="CxQ-cn-v4Y" id="nu8-yh-Nif"/>
                 <outlet property="priceLabel" destination="wUy-T0-a3K" id="s94-fU-ccU"/>
                 <outlet property="productImageView" destination="mJw-YT-a1U" id="boG-h2-xrm"/>
