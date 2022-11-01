@@ -30,6 +30,7 @@ extension ProductTableViewController: ProductTableViewDelegate {
     cell.item = item
     cell.delegate = self
     cell.isFavorite = FavoriteStorage.contains(id: item.id)
+    cell.isBag = BagStorage.contains(id: item.id)
     return cell
   }
   
@@ -51,7 +52,12 @@ extension ProductTableViewController: ProductTableViewCellDelegate {
   }
   
   func bagButtonTapped(forProduct product: Product) {
-    self.reloadData()
+    if BagStorage.contains(id: product.id){
+      BagStorage.remove(id: product.id)
+    } else {
+      BagStorage.add(id: product.id)
+    }
+    tableView.reloadData()
   }
   
 }

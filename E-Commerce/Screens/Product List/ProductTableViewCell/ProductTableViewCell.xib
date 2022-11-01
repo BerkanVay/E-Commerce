@@ -34,7 +34,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owS-VM-HF6">
                                 <rect key="frame" x="0.0" y="66.666666666666671" width="292" height="34.333333333333329"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="bag" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="bag" catalog="system">
+                                    <color key="baseForegroundColor" systemColor="tintColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="bagButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="J1O-oU-sak"/>
                                 </connections>
@@ -42,7 +44,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEz-Kf-8oV">
                                 <rect key="frame" x="0.0" y="113.99999999999999" width="292" height="34.333333333333329"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="favoriteButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="v1d-ht-UjV"/>
                                 </connections>
@@ -80,5 +84,11 @@
     <resources>
         <image name="bag" catalog="system" width="128" height="128"/>
         <image name="heart" catalog="system" width="128" height="107"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

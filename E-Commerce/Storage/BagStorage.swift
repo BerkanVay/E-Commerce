@@ -1,14 +1,14 @@
 //
-//  Favorite.swift
+//  BagStorage.swift
 //  E-Commerce
 //
-//  Created by Mustafa Berkan Vay on 1.11.2022.
+//  Created by Mustafa Berkan Vay on 2.11.2022.
 //
 
 import Foundation
 
-class FavoriteStorage {
-  private static let userDefaultsKey = "favoritedIds"
+class BagStorage {
+  private static let userDefaultsKey = "baggedIds"
   
   private static var ids: [Int] {
     get {
@@ -28,6 +28,10 @@ class FavoriteStorage {
   
   static func remove(id: Int) {
     ids.removeAll { $0 == id }
+  }
+  
+  static func removeAll() {
+    ids.removeAll()
   }
   
   static func contains(id: Int) -> Bool {
