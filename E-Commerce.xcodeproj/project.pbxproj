@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		DA035B332911737500D156E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA035B322911737500D156E0 /* AppDelegate.swift */; };
 		DA035B352911737500D156E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA035B342911737500D156E0 /* SceneDelegate.swift */; };
-		DA035B372911737500D156E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA035B362911737500D156E0 /* ViewController.swift */; };
 		DA035B3A2911737500D156E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA035B382911737500D156E0 /* Main.storyboard */; };
 		DA035B3C2911737600D156E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA035B3B2911737600D156E0 /* Assets.xcassets */; };
 		DA035B3F2911737600D156E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA035B3D2911737600D156E0 /* LaunchScreen.storyboard */; };
+		DA035B51291176FE00D156E0 /* RESTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA035B50291176FE00D156E0 /* RESTClient.swift */; };
+		DA035B532911773300D156E0 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA035B522911773300D156E0 /* ProductResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DA035B2F2911737500D156E0 /* E-Commerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-Commerce.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA035B322911737500D156E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA035B342911737500D156E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DA035B362911737500D156E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DA035B392911737500D156E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA035B3B2911737600D156E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA035B3E2911737600D156E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA035B402911737600D156E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA035B50291176FE00D156E0 /* RESTClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTClient.swift; sourceTree = "<group>"; };
+		DA035B522911773300D156E0 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,96 @@
 		DA035B312911737500D156E0 /* E-Commerce */ = {
 			isa = PBXGroup;
 			children = (
-				DA035B322911737500D156E0 /* AppDelegate.swift */,
-				DA035B342911737500D156E0 /* SceneDelegate.swift */,
-				DA035B362911737500D156E0 /* ViewController.swift */,
-				DA035B382911737500D156E0 /* Main.storyboard */,
-				DA035B3B2911737600D156E0 /* Assets.xcassets */,
-				DA035B3D2911737600D156E0 /* LaunchScreen.storyboard */,
-				DA035B402911737600D156E0 /* Info.plist */,
+				DA035B4E291176A600D156E0 /* REST Client */,
+				DA035B462911754E00D156E0 /* Supporting Files */,
+				DA035B472911759F00D156E0 /* Screens */,
+				DA035B48291175B600D156E0 /* Resources */,
 			);
 			path = "E-Commerce";
+			sourceTree = "<group>";
+		};
+		DA035B462911754E00D156E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA035B322911737500D156E0 /* AppDelegate.swift */,
+				DA035B342911737500D156E0 /* SceneDelegate.swift */,
+				DA035B402911737600D156E0 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA035B472911759F00D156E0 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				DA035B5729117C2E00D156E0 /* Order Cofirmanition */,
+				DA035B5629117C0F00D156E0 /* Shopping Bag */,
+				DA035B5529117BFA00D156E0 /* Product Detail */,
+				DA035B49291175DF00D156E0 /* Product List */,
+				DA035B542911775300D156E0 /* Detail */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		DA035B48291175B600D156E0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DA035B3B2911737600D156E0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DA035B49291175DF00D156E0 /* Product List */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Product List";
+			sourceTree = "<group>";
+		};
+		DA035B4E291176A600D156E0 /* REST Client */ = {
+			isa = PBXGroup;
+			children = (
+				DA035B4F291176DB00D156E0 /* Models */,
+				DA035B50291176FE00D156E0 /* RESTClient.swift */,
+			);
+			path = "REST Client";
+			sourceTree = "<group>";
+		};
+		DA035B4F291176DB00D156E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA035B522911773300D156E0 /* ProductResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DA035B542911775300D156E0 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				DA035B382911737500D156E0 /* Main.storyboard */,
+				DA035B3D2911737600D156E0 /* LaunchScreen.storyboard */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		DA035B5529117BFA00D156E0 /* Product Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Product Detail";
+			sourceTree = "<group>";
+		};
+		DA035B5629117C0F00D156E0 /* Shopping Bag */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Shopping Bag";
+			sourceTree = "<group>";
+		};
+		DA035B5729117C2E00D156E0 /* Order Cofirmanition */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Order Cofirmanition";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +221,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA035B372911737500D156E0 /* ViewController.swift in Sources */,
+				DA035B532911773300D156E0 /* ProductResponse.swift in Sources */,
 				DA035B332911737500D156E0 /* AppDelegate.swift in Sources */,
 				DA035B352911737500D156E0 /* SceneDelegate.swift in Sources */,
+				DA035B51291176FE00D156E0 /* RESTClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +373,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6NHQZB346D;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "E-Commerce/Info.plist";
+				INFOPLIST_FILE = "E-Commerce/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +401,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6NHQZB346D;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "E-Commerce/Info.plist";
+				INFOPLIST_FILE = "E-Commerce/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
