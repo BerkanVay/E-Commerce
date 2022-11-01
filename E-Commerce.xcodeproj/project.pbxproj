@@ -14,6 +14,11 @@
 		DA035B3F2911737600D156E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA035B3D2911737600D156E0 /* LaunchScreen.storyboard */; };
 		DA035B51291176FE00D156E0 /* RESTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA035B50291176FE00D156E0 /* RESTClient.swift */; };
 		DA035B532911773300D156E0 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA035B522911773300D156E0 /* ProductResponse.swift */; };
+		DA2569DB2911842400BE5A36 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2569DA2911842400BE5A36 /* ProductTableViewController.swift */; };
+		DA2569DD2911843700BE5A36 /* ProductTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2569DC2911843700BE5A36 /* ProductTableViewModel.swift */; };
+		DA2569DF2911928A00BE5A36 /* ProductTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2569DE2911928A00BE5A36 /* ProductTableViewDelegate.swift */; };
+		DA2569E329119CA300BE5A36 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2569E129119CA300BE5A36 /* ProductTableViewCell.swift */; };
+		DA2569E429119CA300BE5A36 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA2569E229119CA300BE5A36 /* ProductTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		DA035B402911737600D156E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA035B50291176FE00D156E0 /* RESTClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTClient.swift; sourceTree = "<group>"; };
 		DA035B522911773300D156E0 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
+		DA2569DA2911842400BE5A36 /* ProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
+		DA2569DC2911843700BE5A36 /* ProductTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewModel.swift; sourceTree = "<group>"; };
+		DA2569DE2911928A00BE5A36 /* ProductTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewDelegate.swift; sourceTree = "<group>"; };
+		DA2569E129119CA300BE5A36 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		DA2569E229119CA300BE5A36 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,10 @@
 		DA035B49291175DF00D156E0 /* Product List */ = {
 			isa = PBXGroup;
 			children = (
+				DA2569E029119C7900BE5A36 /* ProductTableViewCell */,
+				DA2569DA2911842400BE5A36 /* ProductTableViewController.swift */,
+				DA2569DC2911843700BE5A36 /* ProductTableViewModel.swift */,
+				DA2569DE2911928A00BE5A36 /* ProductTableViewDelegate.swift */,
 			);
 			path = "Product List";
 			sourceTree = "<group>";
@@ -148,6 +162,15 @@
 			children = (
 			);
 			path = "Order Cofirmanition";
+			sourceTree = "<group>";
+		};
+		DA2569E029119C7900BE5A36 /* ProductTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DA2569E129119CA300BE5A36 /* ProductTableViewCell.swift */,
+				DA2569E229119CA300BE5A36 /* ProductTableViewCell.xib */,
+			);
+			path = ProductTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA035B3F2911737600D156E0 /* LaunchScreen.storyboard in Resources */,
+				DA2569E429119CA300BE5A36 /* ProductTableViewCell.xib in Resources */,
 				DA035B3C2911737600D156E0 /* Assets.xcassets in Resources */,
 				DA035B3A2911737500D156E0 /* Main.storyboard in Resources */,
 			);
@@ -222,9 +246,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA035B532911773300D156E0 /* ProductResponse.swift in Sources */,
+				DA2569E329119CA300BE5A36 /* ProductTableViewCell.swift in Sources */,
 				DA035B332911737500D156E0 /* AppDelegate.swift in Sources */,
 				DA035B352911737500D156E0 /* SceneDelegate.swift in Sources */,
 				DA035B51291176FE00D156E0 /* RESTClient.swift in Sources */,
+				DA2569DB2911842400BE5A36 /* ProductTableViewController.swift in Sources */,
+				DA2569DD2911843700BE5A36 /* ProductTableViewModel.swift in Sources */,
+				DA2569DF2911928A00BE5A36 /* ProductTableViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
