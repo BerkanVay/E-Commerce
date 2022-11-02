@@ -8,7 +8,7 @@
 import UIKit
 
 class ShoppingBagViewController: UIViewController{
-
+  
   var viewModel = ShoppingBagViewModel()
   
   @IBOutlet private weak var amountLabel: UILabel!
@@ -42,6 +42,7 @@ extension ShoppingBagViewController {
     let tableBackgroundView = UITextView(frame: CGRect(x: 0 , y: 0, width: 100, height: 100))
     tableBackgroundView.text = "Your bag is empty. Please add a product to order."
     tableBackgroundView.font = UIFont(name: "Helvetica", size: 15)
+    tableView.backgroundView = tableBackgroundView
   }
 }
 

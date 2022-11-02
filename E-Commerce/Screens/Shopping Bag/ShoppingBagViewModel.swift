@@ -7,9 +7,11 @@
 
 import Foundation
 class ShoppingBagViewModel {
+  
   weak var delegate: ShoppingBagViewDelegate?
+  
   var productIds: [Int] = UserDefaults.standard.object(forKey: "baggedIds") as! [Int]
-  var productInBag: [Product]? = nil 
+  var productInBag: [Product]? = nil
   var totalPrice: Double {
     bagPrice()
   }

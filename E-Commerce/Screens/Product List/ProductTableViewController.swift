@@ -89,8 +89,6 @@ extension ProductTableViewController {
     }
   }
   
-  
-  
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     performSegue(withIdentifier: "showDetailView", sender: nil)
   }

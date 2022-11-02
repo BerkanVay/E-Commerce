@@ -24,7 +24,6 @@
 		DA2569E329119CA300BE5A36 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2569E129119CA300BE5A36 /* ProductTableViewCell.swift */; };
 		DA2569E429119CA300BE5A36 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA2569E229119CA300BE5A36 /* ProductTableViewCell.xib */; };
 		DA4922CF2913003200C0F126 /* OrderCofirmanitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4922CE2913003200C0F126 /* OrderCofirmanitionViewController.swift */; };
-		DA4922D32913009F00C0F126 /* OrderCofirmanitionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4922D22913009F00C0F126 /* OrderCofirmanitionViewModel.swift */; };
 		DAB5C5C729128D66009A7EB0 /* ShoppingBagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5C5C629128D66009A7EB0 /* ShoppingBagViewModel.swift */; };
 		DAB5C5CB2912AFA1009A7EB0 /* ShoppingBagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5C5C92912AFA1009A7EB0 /* ShoppingBagTableViewCell.swift */; };
 		DAB5C5CC2912AFA1009A7EB0 /* ShoppingBagTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB5C5CA2912AFA1009A7EB0 /* ShoppingBagTableViewCell.xib */; };
@@ -52,7 +51,6 @@
 		DA2569E129119CA300BE5A36 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		DA2569E229119CA300BE5A36 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		DA4922CE2913003200C0F126 /* OrderCofirmanitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCofirmanitionViewController.swift; sourceTree = "<group>"; };
-		DA4922D22913009F00C0F126 /* OrderCofirmanitionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCofirmanitionViewModel.swift; sourceTree = "<group>"; };
 		DAB5C5C629128D66009A7EB0 /* ShoppingBagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBagViewModel.swift; sourceTree = "<group>"; };
 		DAB5C5C92912AFA1009A7EB0 /* ShoppingBagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBagTableViewCell.swift; sourceTree = "<group>"; };
 		DAB5C5CA2912AFA1009A7EB0 /* ShoppingBagTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingBagTableViewCell.xib; sourceTree = "<group>"; };
@@ -189,7 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				DA4922CE2913003200C0F126 /* OrderCofirmanitionViewController.swift */,
-				DA4922D22913009F00C0F126 /* OrderCofirmanitionViewModel.swift */,
 			);
 			path = "Order Cofirmanition";
 			sourceTree = "<group>";
@@ -295,7 +292,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA4922D32913009F00C0F126 /* OrderCofirmanitionViewModel.swift in Sources */,
 				DAB5C5D02912D09B009A7EB0 /* ShoppingBagViewDelegate.swift in Sources */,
 				DA035B532911773300D156E0 /* ProductResponse.swift in Sources */,
 				DA2569E329119CA300BE5A36 /* ProductTableViewCell.swift in Sources */,
