@@ -50,7 +50,9 @@ class ProductDetailViewController: UIViewController {
   
   private func setBagButtonState(isBag: Bool) {
     let imageName = isBag ? "bag.fill" : "bag"
+    let buttonText = isBag ? "Remove from bag" : "Add to bag"
     
+    bagButton.setTitle(buttonText, for: .normal)
     bagButton.setImage(
       .init(systemName: imageName),
       for: .normal

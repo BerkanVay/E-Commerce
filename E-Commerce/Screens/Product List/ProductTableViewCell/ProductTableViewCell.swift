@@ -39,7 +39,9 @@ class ProductTableViewCell: UITableViewCell {
   
   private func setFavoriteButtonState(isFavorited: Bool) {
     let imageName = isFavorited ? "heart.fill" : "heart"
-    
+    let buttonText = isFavorited ? "Remove from favorite" : "Make favorite"
+
+    favoriteButton.setTitle(buttonText, for: .normal)
     favoriteButton.setImage(
       .init(systemName: imageName),
       for: .normal
@@ -48,7 +50,9 @@ class ProductTableViewCell: UITableViewCell {
   
   private func setBagButtonState(isBag: Bool) {
     let imageName = isBag ? "bag.fill" : "bag"
+    let buttonText = isBag ? "Remove from bag" : "Add to bag"
     
+    bagButton.setTitle(buttonText, for: .normal)
     bagButton.setImage(
       .init(systemName: imageName),
       for: .normal
