@@ -8,11 +8,21 @@
 import UIKit
 
 class ProductTableViewController: UITableViewController {
-
+  
   private var viewModel = ProductTableViewModel()
   override func viewDidLoad() {
     super.viewDidLoad()
+    setup()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    tableView.reloadData()
+  }
+  
+  private func setup() {
     viewModel.delegate = self
+    title = "Momentup Store"
+    navigationController?.navigationBar.prefersLargeTitles = true
     tableView.register(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
   }
 }
@@ -59,5 +69,33 @@ extension ProductTableViewController: ProductTableViewCellDelegate {
     }
     tableView.reloadData()
   }
+}
+
+extension ProductTableViewController {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "showDetailView" {
+      if let indexPath = self.tableView.indexPathForSelectedRow {
+        let destinationViewController = segue.destination as? ProductDetailViewController
+        destinationViewController?.delegate = self
+        guard let item = viewModel.result?.products[indexPath.row] else { return }
+        destinationViewController?.isFavorite = FavoriteStorage.contains(id: item.id)
+        destinationViewController?.isBag = BagStorage.contains(id: item.id)
+        destinationViewController?.item = item
+      }
+    }
+    if segue.identifier == "showBagView" {
+      let destinationViewController = segue.destination as? ShoppingBagViewController
+      destinationViewController?.viewModel.productResponse = viewModel.result
+    }
+  }
   
+  
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    performSegue(withIdentifier: "showDetailView", sender: nil)
+  }
+  
+  @IBAction func bagButtonTapped(_ sender: Any) {
+    performSegue(withIdentifier: "showBagView", sender: nil)
+  }
 }

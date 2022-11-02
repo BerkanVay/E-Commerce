@@ -17,6 +17,8 @@ struct Product: Decodable {
   let name: String
   let currency: String
   let imageName: String
+  let category: String
+  let color: String
   
   enum CodingKeys: String, CodingKey {
     case id
@@ -24,6 +26,8 @@ struct Product: Decodable {
     case name
     case currency
     case imageName = "image_name"
+    case category
+    case color
   }
 }
 

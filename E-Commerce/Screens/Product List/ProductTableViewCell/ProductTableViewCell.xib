@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,22 +18,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="4Fu-Gv-3s9">
-                        <rect key="frame" x="158" y="30" width="292" height="148.33333333333334"/>
+                        <rect key="frame" x="158" y="30" width="50" height="148.33333333333334"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CxQ-cn-v4Y">
-                                <rect key="frame" x="0.0" y="0.0" width="292" height="20.333333333333332"/>
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="20.333333333333332"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUy-T0-a3K">
-                                <rect key="frame" x="0.0" y="33.333333333333336" width="292" height="20.333333333333336"/>
+                                <rect key="frame" x="0.0" y="33.333333333333336" width="50" height="20.333333333333336"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owS-VM-HF6">
-                                <rect key="frame" x="0.0" y="66.666666666666671" width="292" height="34.333333333333329"/>
+                                <rect key="frame" x="0.0" y="66.666666666666671" width="50" height="34.333333333333329"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="sjl-Be-2c6"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="bag" catalog="system">
                                     <color key="baseForegroundColor" systemColor="tintColor"/>
@@ -42,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEz-Kf-8oV">
-                                <rect key="frame" x="0.0" y="113.99999999999999" width="292" height="34.333333333333329"/>
+                                <rect key="frame" x="0.0" y="113.99999999999999" width="50" height="34.333333333333329"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
                                     <color key="baseForegroundColor" systemColor="systemRedColor"/>
@@ -52,6 +56,9 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="owS-VM-HF6" firstAttribute="centerX" secondItem="4Fu-Gv-3s9" secondAttribute="centerX" id="Lwa-wo-TY1"/>
+                        </constraints>
                     </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mJw-YT-a1U">
                         <rect key="frame" x="10" y="32" width="128" height="165"/>

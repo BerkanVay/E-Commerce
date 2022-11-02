@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ProductTableViewCellDelegate {
+protocol ProductTableViewCellDelegate: AnyObject {
   func favoriteButtonTapped(forProduct product : Product)
   func bagButtonTapped(forProduct product: Product)
 }
