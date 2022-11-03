@@ -17,8 +17,8 @@ class ProductTableViewCell: UITableViewCell {
   
   var item: Product? = nil
   var delegate: ProductTableViewCellDelegate?
-  var isFavorite: Bool = false
-  var isBag: Bool = false
+  var isFavorite = false
+  var isInBag = false
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -27,7 +27,7 @@ class ProductTableViewCell: UITableViewCell {
     super.setSelected(selected, animated: animated)
     configurate()
     setFavoriteButtonState(isFavorited: isFavorite)
-    setBagButtonState(isBag: isBag)
+    setBagButtonState(isInBag: isInBag)
   }
   
   private func configurate(){
@@ -48,9 +48,9 @@ class ProductTableViewCell: UITableViewCell {
     )
   }
   
-  private func setBagButtonState(isBag: Bool) {
-    let imageName = isBag ? "bag.fill" : "bag"
-    let buttonText = isBag ? "Remove from bag" : "Add to bag"
+  private func setBagButtonState(isInBag: Bool) {
+    let imageName = isInBag ? "bag.fill" : "bag"
+    let buttonText = isInBag ? "Remove from bag" : "Add to bag"
     
     bagButton.setTitle(buttonText, for: .normal)
     bagButton.setImage(

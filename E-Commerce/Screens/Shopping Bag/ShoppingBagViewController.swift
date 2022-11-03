@@ -14,7 +14,7 @@ class ShoppingBagViewController: UIViewController{
   @IBOutlet private weak var amountLabel: UILabel!
   @IBOutlet private weak var itemCountLabel: UILabel!
   @IBOutlet private weak var tableView: UITableView!
-  @IBOutlet weak var orderButton: UIButton!
+  @IBOutlet private weak var orderButton: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -34,11 +34,8 @@ extension ShoppingBagViewController {
   
   private func configurate() {
     title = "Your Bag"
-    var itemCountLabelTextFormatter: String {
-      viewModel.productInBag?.count == 1 ? "There is 1 product in bag" : "There are \(viewModel.productInBag?.count ?? 0) product in bag."
-    }
-    itemCountLabel.text = itemCountLabelTextFormatter
-    amountLabel.text = "Total Price: \(Float(viewModel.totalPrice)) USD"
+    itemCountLabel.text = viewModel.productInBag?.count == 1 ? "There is 1 product in bag" : "There are \(viewModel.productInBag?.count ?? 0) product in bag."
+    amountLabel.text = "Total Price: \(Float(viewModel.bagPrice())) USD"
     let tableBackgroundView = UITextView(frame: CGRect(x: 0 , y: 0, width: 100, height: 100))
     tableBackgroundView.text = "Your bag is empty. Please add a product to order."
     tableBackgroundView.font = UIFont(name: "Helvetica", size: 15)
@@ -68,11 +65,12 @@ extension ShoppingBagViewController: UITableViewDataSource, UITableViewDelegate 
       updateButtonStatus()
     }
   }
+  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "showOrderCofirmanition" {
-      let destinationViewController = segue.destination as? OrderCofirmanitionViewController
+    if segue.identifier == "showOrderConfirmation" {
+      let destinationViewController = segue.destination as? OrderConfirmationViewController
       destinationViewController?.totalItemCount = viewModel.productInBag?.count
-      destinationViewController?.totalAmount = viewModel.totalPrice
+      destinationViewController?.totalAmount = viewModel.bagPrice()
       
     }
   }
@@ -84,7 +82,7 @@ extension ShoppingBagViewController: ShoppingBagViewDelegate {
       viewModel.productInBag?.count == 1 ? "There is 1 product in bag" : "There are \(viewModel.productInBag?.count ?? 0) product in bag."
     }
     itemCountLabel.text = itemCountLabelTextFormatter
-    amountLabel.text = "Total Price: \(Float(viewModel.totalPrice)) USD"
+    amountLabel.text = "Total Price: \(Float(viewModel.bagPrice())) USD"
   }
   
   private func updateButtonStatus() {

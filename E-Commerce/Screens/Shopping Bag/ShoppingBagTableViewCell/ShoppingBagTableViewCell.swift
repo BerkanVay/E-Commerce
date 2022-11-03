@@ -9,9 +9,9 @@ import UIKit
 
 class ShoppingBagTableViewCell: UITableViewCell {
 
-  @IBOutlet weak var productImageView: UIImageView!
-  @IBOutlet weak var nameLabel: UILabel!
-  @IBOutlet weak var priceLabel: UILabel!
+  @IBOutlet private weak var productImageView: UIImageView!
+  @IBOutlet private weak var nameLabel: UILabel!
+  @IBOutlet private weak var priceLabel: UILabel!
 
   var item: Product? = nil
   
@@ -28,6 +28,6 @@ class ShoppingBagTableViewCell: UITableViewCell {
     guard let item else { return }
     productImageView.image = UIImage(named: item.imageName)
     nameLabel.text = item.name
-    priceLabel.text = String(item.price) + " " + item.currency
+    priceLabel.text = "\(item.price) \(item.currency)"
   }
 }

@@ -8,7 +8,6 @@
 import UIKit
 
 class ProductDetailViewController: UIViewController {
-  
   @IBOutlet private weak var priceLabel: UILabel!
   @IBOutlet private weak var colorLabel: UILabel!
   @IBOutlet private weak var categoryLabel: UILabel!
@@ -18,7 +17,7 @@ class ProductDetailViewController: UIViewController {
   @IBOutlet private weak var bagButton: UIButton!
   
   var item: Product? = nil
-  var isBag = false
+  var isInBag = false
   var isFavorite = false
   
   override func viewDidLoad() {
@@ -30,12 +29,11 @@ class ProductDetailViewController: UIViewController {
     guard let item else { return }
     title = item.name
     productImageView.image = UIImage(named: item.imageName)
-    priceLabel.text = String(item.price) + " " + item.currency
+    priceLabel.text = "\(item.price) \(item.currency)"
     categoryLabel.text = item.category
     colorLabel.text = item.color
     setFavoriteButtonState(isFavorited: isFavorite)
-    setBagButtonState(isBag: isBag)
-    
+    setBagButtonState(isInBag: isInBag)
   }
   
   private func setFavoriteButtonState(isFavorited: Bool) {
@@ -47,9 +45,9 @@ class ProductDetailViewController: UIViewController {
     )
   }
   
-  private func setBagButtonState(isBag: Bool) {
-    let imageName = isBag ? "bag.fill" : "bag"
-    let buttonText = isBag ? "Remove from bag" : "Add to bag"
+  private func setBagButtonState(isInBag: Bool) {
+    let imageName = isInBag ? "bag.fill" : "bag"
+    let buttonText = isInBag ? "Remove from bag" : "Add to bag"
     
     bagButton.setTitle(buttonText, for: .normal)
     bagButton.setImage(
@@ -68,7 +66,7 @@ extension ProductDetailViewController {
     } else {
       BagStorage.add(id: item.id)
     }
-    isBag = BagStorage.contains(id: item.id)
+    isInBag = BagStorage.contains(id: item.id)
     self.configure()
   }
   

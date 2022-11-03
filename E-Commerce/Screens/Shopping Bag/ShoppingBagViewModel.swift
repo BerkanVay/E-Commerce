@@ -12,9 +12,6 @@ class ShoppingBagViewModel {
   
   var productIds: [Int] = UserDefaults.standard.object(forKey: "baggedIds") as! [Int]
   var productInBag: [Product]? = nil
-  var totalPrice: Double {
-    bagPrice()
-  }
   var productResponse: ProductResponse? = nil {
     didSet {
       productInBag = seperateBag()
@@ -29,7 +26,7 @@ class ShoppingBagViewModel {
     return filteredProducts
   }
   
-  private func bagPrice() -> Double {
+   func bagPrice() -> Double {
     guard let productInBag else { return 0 }
     let prices = productInBag.map { product in
       product.price

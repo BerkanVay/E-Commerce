@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="do9-79-MN8">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -40,7 +41,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="bag" catalog="system" title=" Order"/>
                                         <connections>
-                                            <segue destination="ddz-lI-7R4" kind="push" identifier="showOrderCofirmanition" id="t9z-Se-X9h"/>
+                                            <segue destination="ddz-lI-7R4" kind="push" identifier="showOrderConfirmation" id="t9z-Se-X9h"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -71,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="2297" y="-1339"/>
         </scene>
-        <!--Order Cofirmanition View Controller-->
+        <!--Order Confirmation View Controller-->
         <scene sceneID="bVE-u9-Q6G">
             <objects>
-                <viewController id="ddz-lI-7R4" customClass="OrderCofirmanitionViewController" customModule="E_Commerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ddz-lI-7R4" customClass="OrderConfirmationViewController" customModule="E_Commerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zX9-g3-LB1">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

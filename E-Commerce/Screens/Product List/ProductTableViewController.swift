@@ -39,7 +39,7 @@ extension ProductTableViewController {
     cell.item = item
     cell.delegate = self
     cell.isFavorite = FavoriteStorage.contains(id: item.id)
-    cell.isBag = BagStorage.contains(id: item.id)
+    cell.isInBag = BagStorage.contains(id: item.id)
     return cell
   }
 
@@ -72,7 +72,7 @@ extension ProductTableViewController {
         let destinationViewController = segue.destination as? ProductDetailViewController
         guard let item = viewModel.result?.products[indexPath.row] else { return }
         destinationViewController?.isFavorite = FavoriteStorage.contains(id: item.id)
-        destinationViewController?.isBag = BagStorage.contains(id: item.id)
+        destinationViewController?.isInBag = BagStorage.contains(id: item.id)
         destinationViewController?.item = item
       }
     }

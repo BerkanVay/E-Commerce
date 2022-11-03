@@ -22,7 +22,8 @@
 		DA2569DD2911843700BE5A36 /* ProductTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2569DC2911843700BE5A36 /* ProductTableViewModel.swift */; };
 		DA2569E329119CA300BE5A36 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2569E129119CA300BE5A36 /* ProductTableViewCell.swift */; };
 		DA2569E429119CA300BE5A36 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA2569E229119CA300BE5A36 /* ProductTableViewCell.xib */; };
-		DA4922CF2913003200C0F126 /* OrderCofirmanitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4922CE2913003200C0F126 /* OrderCofirmanitionViewController.swift */; };
+		DA2960782913AC8F0087753E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2960772913AC8F0087753E /* Extension.swift */; };
+		DA4922CF2913003200C0F126 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4922CE2913003200C0F126 /* OrderConfirmationViewController.swift */; };
 		DAB5C5C729128D66009A7EB0 /* ShoppingBagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5C5C629128D66009A7EB0 /* ShoppingBagViewModel.swift */; };
 		DAB5C5CB2912AFA1009A7EB0 /* ShoppingBagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5C5C92912AFA1009A7EB0 /* ShoppingBagTableViewCell.swift */; };
 		DAB5C5CC2912AFA1009A7EB0 /* ShoppingBagTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB5C5CA2912AFA1009A7EB0 /* ShoppingBagTableViewCell.xib */; };
@@ -48,7 +49,8 @@
 		DA2569DC2911843700BE5A36 /* ProductTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewModel.swift; sourceTree = "<group>"; };
 		DA2569E129119CA300BE5A36 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		DA2569E229119CA300BE5A36 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
-		DA4922CE2913003200C0F126 /* OrderCofirmanitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCofirmanitionViewController.swift; sourceTree = "<group>"; };
+		DA2960772913AC8F0087753E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		DA4922CE2913003200C0F126 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		DAB5C5C629128D66009A7EB0 /* ShoppingBagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBagViewModel.swift; sourceTree = "<group>"; };
 		DAB5C5C92912AFA1009A7EB0 /* ShoppingBagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBagTableViewCell.swift; sourceTree = "<group>"; };
 		DAB5C5CA2912AFA1009A7EB0 /* ShoppingBagTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingBagTableViewCell.xib; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				DA035B462911754E00D156E0 /* Supporting Files */,
 				DA035B472911759F00D156E0 /* Screens */,
 				DA035B48291175B600D156E0 /* Resources */,
+				DA2960792913AC940087753E /* Extension */,
 			);
 			path = "E-Commerce";
 			sourceTree = "<group>";
@@ -183,7 +186,7 @@
 		DA035B5729117C2E00D156E0 /* Order Cofirmanition */ = {
 			isa = PBXGroup;
 			children = (
-				DA4922CE2913003200C0F126 /* OrderCofirmanitionViewController.swift */,
+				DA4922CE2913003200C0F126 /* OrderConfirmationViewController.swift */,
 			);
 			path = "Order Cofirmanition";
 			sourceTree = "<group>";
@@ -205,6 +208,14 @@
 				DA0FD2202911B95C004DDA99 /* ProductTableViewCellDelegate.swift */,
 			);
 			path = ProductTableViewCell;
+			sourceTree = "<group>";
+		};
+		DA2960792913AC940087753E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DA2960772913AC8F0087753E /* Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		DAB5C5C82912AF7C009A7EB0 /* ShoppingBagTableViewCell */ = {
@@ -296,9 +307,10 @@
 				DAB5C5C729128D66009A7EB0 /* ShoppingBagViewModel.swift in Sources */,
 				DA035B352911737500D156E0 /* SceneDelegate.swift in Sources */,
 				DA0FD2212911B95C004DDA99 /* ProductTableViewCellDelegate.swift in Sources */,
-				DA4922CF2913003200C0F126 /* OrderCofirmanitionViewController.swift in Sources */,
+				DA4922CF2913003200C0F126 /* OrderConfirmationViewController.swift in Sources */,
 				DA0FD2262911C7FF004DDA99 /* ProductDetailViewController.swift in Sources */,
 				DA035B51291176FE00D156E0 /* RESTClient.swift in Sources */,
+				DA2960782913AC8F0087753E /* Extension.swift in Sources */,
 				DA2569DB2911842400BE5A36 /* ProductTableViewController.swift in Sources */,
 				DAB5C5CB2912AFA1009A7EB0 /* ShoppingBagTableViewCell.swift in Sources */,
 				DAB5C5CE2912BA56009A7EB0 /* ShoppingBagViewController.swift in Sources */,
