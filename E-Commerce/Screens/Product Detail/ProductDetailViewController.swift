@@ -17,7 +17,6 @@ class ProductDetailViewController: UIViewController {
   @IBOutlet private weak var favoriteButton: UIButton!
   @IBOutlet private weak var bagButton: UIButton!
   
-  weak var delegate: ProductTableViewDelegate?
   var item: Product? = nil
   var isBag = false
   var isFavorite = false
@@ -71,7 +70,6 @@ extension ProductDetailViewController {
     }
     isBag = BagStorage.contains(id: item.id)
     self.configure()
-    delegate?.reloadData()
   }
   
   @IBAction private func favoriteButtonTapped(_ sender: Any) {
@@ -83,7 +81,6 @@ extension ProductDetailViewController {
     }
     isFavorite = FavoriteStorage.contains(id: item.id)
     self.configure()
-    delegate?.reloadData()
   }
 }
 

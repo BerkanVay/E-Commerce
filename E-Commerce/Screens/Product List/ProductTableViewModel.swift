@@ -8,12 +8,7 @@
 import Foundation
 
 class ProductTableViewModel {
-  weak var delegate: ProductTableViewDelegate?
-  var result: ProductResponse? {
-    didSet {
-      delegate?.reloadData()
-    }
-  }
+  var result: ProductResponse? = nil
   
   init() {
     self.fetchProduct()

@@ -20,14 +20,13 @@ class ProductTableViewController: UITableViewController {
   }
   
   private func setup() {
-    viewModel.delegate = self
     title = "Momentup Store"
     navigationController?.navigationBar.prefersLargeTitles = true
     tableView.register(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
   }
 }
 
-extension ProductTableViewController: ProductTableViewDelegate {
+extension ProductTableViewController {
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     viewModel.result?.products.count ?? 0
   }
@@ -43,12 +42,7 @@ extension ProductTableViewController: ProductTableViewDelegate {
     cell.isBag = BagStorage.contains(id: item.id)
     return cell
   }
-  
-  func reloadData() {
-    DispatchQueue.main.async {
-      self.reloadData()
-    }
-  }
+
 }
 
 extension ProductTableViewController: ProductTableViewCellDelegate {
@@ -76,7 +70,6 @@ extension ProductTableViewController {
     if segue.identifier == "showDetailView" {
       if let indexPath = self.tableView.indexPathForSelectedRow {
         let destinationViewController = segue.destination as? ProductDetailViewController
-        destinationViewController?.delegate = self
         guard let item = viewModel.result?.products[indexPath.row] else { return }
         destinationViewController?.isFavorite = FavoriteStorage.contains(id: item.id)
         destinationViewController?.isBag = BagStorage.contains(id: item.id)
