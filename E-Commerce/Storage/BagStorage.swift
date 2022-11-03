@@ -12,7 +12,7 @@ class BagStorage {
   
   private static var ids: [Int] {
     get {
-      return UserDefaults.standard.object(forKey: userDefaultsKey) as? [Int] ?? []
+      UserDefaults.standard.object(forKey: userDefaultsKey) as? [Int] ?? []
     }
     
     set {
